@@ -1,0 +1,169 @@
+/* ===== Page Layout & Spacing ===== */
+
+.pagePadding {
+  padding: 0 12.5% 4rem 12.5%;
+}
+
+@media screen and (max-width: 1400px) {
+  .pagePadding {
+    padding: 0 5% 4rem 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagePadding {
+    padding: 0 2.5% 4rem 2.5%;
+  }
+}
+
+.mt1rem {
+  margin-top: 1rem;
+}
+
+.mt2rem {
+  margin-top: 2rem;
+}
+
+.mb1rem {
+  margin-bottom: 1rem;
+}
+
+.mb2rem {
+  margin-bottom: 2rem;
+}
+
+.mb3rem {
+  margin-bottom: 3rem;
+}
+
+.mb4rem {
+  margin-bottom: 4rem;
+}
+
+.mw80rem {
+  max-width: 80rem;
+}
+
+
+/* ===== Links and Buttons ===== */
+
+.link,
+.link:link {
+  color: rgba(36, 122, 76, 0.617);
+  text-decoration: none;
+}
+
+.link:visited {
+  color: rgb(46, 125, 83);
+}
+
+.link:focus,
+.link:hover {
+  color: rgb(230, 179, 129);
+  font-weight: bold;
+}
+
+.link:active {
+  color: rgb(180, 70, 25);
+  text-decoration: none;
+}
+
+.button,
+.button:link,
+.button:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.2em;
+  padding: 0.5em 2em;
+  background-color: rgb(150, 185, 157);
+  border: 2px solid rgb(158, 162, 159);
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgb(217, 217, 217);
+  color: rgb(243, 249, 249);
+  font-size: 0.95rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:focus,
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(63, 105, 72);
+  border: 2px solid rgb(158, 162, 159);;
+  font-weight: bold;
+}
+
+.button:active {
+  background-color: rgb(240, 184, 0);
+  border: 2px solid rgb(0, 180, 240);
+  box-shadow: 0 2px 5px rgb(200, 240, 250);
+}
+
+
+/* ===== Forms ===== */
+
+.stackedForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+}
+
+.label {
+  margin-bottom: 0.4rem;
+  margin-left: 0.15rem;
+  font-weight: 700;
+}
+
+.input {
+  min-height: 2rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgb(140, 140, 140);
+  border-radius: 5px;
+}
+
+
+/* ===== Other HTML Elements ===== */
+
+.h1 {
+  margin-bottom: 0.8em;
+}
+
+
+/* ===== Font Size & Weight ===== */
+
+.bold {
+  font-weight: 700;
+}
+
+.regularWeight {
+  font-weight: 400;
+}
+
+.smallText {
+  font-size: 0.9em;
+}
+
+.largeText {
+  font-size: 1.1em;
+}
+
+.XLText {
+  font-size: 1.2em;
+}
+
+
+/* ===== Miscellaneous ===== */
+
+.red {
+  color: rgb(175, 40, 5);
+}
+
+.separator {
+  margin: 2em 0;
+}
+
+.emptyFeedMessage {
+  margin-top: 2.5em;
+  font-style: italic;
+}
