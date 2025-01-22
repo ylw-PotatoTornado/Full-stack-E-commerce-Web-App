@@ -15,7 +15,12 @@ import { RatingModel } from '../models/Rating.model.js';
 dotenv.config();
 
 {/** Init sequelize instance */}
-const sequelize = new Sequelize(process.env.DB_URI, {dialect: 'postgres',})
+const sequelize = new Sequelize(
+    process.env.DB_URI, 
+    {
+        dialect: 'postgres',
+        logging: false,
+    })
 
 
 {/** Init data models */}

@@ -4,8 +4,20 @@ import cors from 'cors';
 import session from 'express-session';
 import Redis from 'ioredis';
 import { RedisStore } from 'connect-redis';
-
 import { connectDB} from "./configs/db.js";
+
+{/** User Authentication */}
+import passport from 'passport';
+import auth from './auth';
+
+{/** Load Routers */}
+import authRouter from './routes/auth';
+import userRouter from './routes/users';
+import productRouter from './routes/products';
+import categoryRouter from './routes/categories';
+import cartRouter from './routes/carts';
+import checkoutRouter from './routes/checkout';
+import orderRouter from './routes/orders';
 
 
 dotenv.config();
@@ -46,14 +58,29 @@ api.use(session({
 }))
 
 
-
-
+{/** Init Passport Authentication Middleware */}
+api.use(passport.initialize());
+api.use(passport.authenticate('session'));
+passport.serializeUser(auth.serialize);
+passport.deserializeUser(auth.deserializeUser);
 
 
 api.get('/', (req, res) => {
-        res.status(200).send('Welcome!.')
-});
+    if (req.isAuthenticated()) {
+        res.status(200).send(`Welcome! ${req.user.name}`);
+    } else {
+        res.status(200).send(`Logged out.`);
+    }
+})
 
+
+api.use('/auth',authRouter);
+api.use('/users',userRouter);
+api.use('/products',productRouter);
+api.use('/categories',categoryRouter);
+api.use('/carts',cartRouter);
+api.use('/checkout',checkoutRouter);
+api.use('/orders',orderRouter);
 
 
 console.log(`Node Environment: ${process.env.NODE_ENV}`);
