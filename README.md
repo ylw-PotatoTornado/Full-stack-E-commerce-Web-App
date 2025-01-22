@@ -2,9 +2,11 @@
 
 Reconstruction on going...Stay tuned
 
-![Alt Text](front-end/public/Frontend-UI-Template-2.png)
+![Alt Text](backend/utils/ER_Diagram.png)
 
-![Alt Text](front-end/public/Frontend-UI-Template.png)
+![Alt Text](frontend/public/Frontend-UI-Template-2.png)
+
+![Alt Text](frontend/public/Frontend-UI-Template.png)
 ## What to Expect
 
 ### 1. Backend - DB Model Update
